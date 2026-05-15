@@ -1,0 +1,41 @@
+import React from 'react';
+import { Sprout } from 'lucide-react';
+
+const Header = ({ onNavigate }) => {
+  const handleNav = (page, hash) => (e) => {
+    e.preventDefault();
+    onNavigate(page);
+    if (hash) {
+      setTimeout(() => {
+        const el = document.querySelector(hash);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <header className="soft-nav" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, padding: '0.75rem 0' }}>
+      <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <a href="#" onClick={handleNav('home')} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'var(--color-text-main)', cursor: 'pointer' }}>
+          <div style={{ background: 'linear-gradient(135deg, var(--color-primary), var(--color-secondary))', borderRadius: '12px', padding: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <Sprout size={22} color="#fff" />
+          </div>
+          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.2rem' }}>
+            Garden Collective
+          </span>
+        </a>
+        <nav style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+          <a href="#about" onClick={handleNav('home', '#about')} style={{ color: 'var(--color-text-muted)', fontWeight: 500, fontSize: '0.9rem' }}>About</a>
+          <a href="#structure" onClick={handleNav('home', '#structure')} style={{ color: 'var(--color-text-muted)', fontWeight: 500, fontSize: '0.9rem' }}>Structure</a>
+          <a href="#supporters" onClick={handleNav('home', '#supporters')} style={{ color: 'var(--color-text-muted)', fontWeight: 500, fontSize: '0.9rem' }}>Supporters</a>
+          <a href="#contact" onClick={handleNav('home', '#contact')} style={{ color: 'var(--color-text-muted)', fontWeight: 500, fontSize: '0.9rem' }}>Contact</a>
+          <button onClick={() => { onNavigate('apply'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="btn btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.85rem' }}>Apply Now</button>
+        </nav>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

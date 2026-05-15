@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700;800&display=swap');
+
+:root {
+  /* Color Palette - Soft Garden, Warm & Inviting */
+  --color-bg-deep: #faf9f6;
+  --color-bg-base: #f4f1ec;
+  --color-bg-surface: #ffffff;
+  
+  --color-primary: #5b8c5a;     /* Soft sage green */
+  --color-primary-glow: rgba(91, 140, 90, 0.15);
+  --color-secondary: #7eb77f;   /* Lighter fern green */
+  --color-accent: #d4a373;      /* Warm terracotta */
+  
+  --color-text-main: #2d3a2e;
+  --color-text-muted: #6b7c6b;
+  --color-text-light: #95a695;
+
+  /* Typography */
+  --font-primary: 'DM Sans', sans-serif;
+  --font-display: 'Playfair Display', serif;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  --space-xxl: 6rem;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  /* Transitions & Animations */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}

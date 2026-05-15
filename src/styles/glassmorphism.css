@@ -1,0 +1,48 @@
+/* Soft Card Utilities */
+
+.card {
+  background: var(--color-bg-surface);
+  border: 1px solid rgba(91, 140, 90, 0.1);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(91, 140, 90, 0.1);
+}
+
+.soft-nav {
+  background: rgba(250, 249, 246, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(91, 140, 90, 0.08);
+}
+
+.soft-input {
+  background: var(--color-bg-deep);
+  border: 1.5px solid rgba(91, 140, 90, 0.15);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-main);
+  padding: 0.875rem 1rem;
+  width: 100%;
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  transition: all var(--transition-normal);
+}
+
+.soft-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(91, 140, 90, 0.1);
+}
+
+.soft-input::placeholder {
+  color: var(--color-text-light);
+}
+
+select.soft-input {
+  appearance: auto;
+}

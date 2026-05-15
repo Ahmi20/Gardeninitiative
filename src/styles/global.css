@@ -1,0 +1,144 @@
+@import './variables.css';
+@import './glassmorphism.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-bg-deep);
+  color: var(--color-text-main);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+  color: var(--color-text-main);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.section {
+  padding: var(--space-xxl) 0;
+  position: relative;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+/* Divider */
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border-radius: 2px;
+  margin: 0 auto 2rem auto;
+}
+
+/* Base Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  border-radius: 50px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-normal);
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(91, 140, 90, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(91, 140, 90, 0.35);
+  background: #4e7a4d;
+  color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-warm {
+  background: var(--color-accent);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(212, 163, 115, 0.3);
+}
+
+.btn-warm:hover {
+  transform: translateY(-2px);
+  background: #c4935f;
+  color: #fff;
+}
+
+/* Interactive Enhancements */
+.interactive-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.interactive-panel {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.interactive-panel:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(91, 140, 90, 0.12);
+}
+
+/* Leaf decoration */
+.leaf-decoration {
+  position: absolute;
+  opacity: 0.06;
+  font-size: 8rem;
+  pointer-events: none;
+  user-select: none;
+}
