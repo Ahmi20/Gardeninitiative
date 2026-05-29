@@ -221,10 +221,10 @@ const ProgramDetails = () => {
           ))}
         </div>
 
-        {/* Program Pillars / Curriculum */}
-        <div id="curriculum" style={{ marginBottom: '6rem', textAlign: 'center' }}>
+        {/* Program Structure / Curriculum */}
+        <div id="structure" style={{ marginBottom: '6rem', textAlign: 'center' }}>
           <div className="section-divider"></div>
-          <h2 style={{ fontSize: '2.25rem', marginBottom: '0.5rem' }}>Program Curriculum</h2>
+          <h2 style={{ fontSize: '2.25rem', marginBottom: '0.5rem' }}>Program Structure</h2>
           <p style={{ color: 'var(--color-text-muted)', fontSize: '1.05rem', marginBottom: '2.5rem' }}>
             Explore the three core pillars of our film and media workforce training program
           </p>
@@ -302,8 +302,8 @@ const ProgramDetails = () => {
           </div>
         </div>
 
-        {/* Program Structure — Journey Timeline */}
-        <div id="structure" style={{ marginBottom: '5rem' }}>
+        {/* Program Journey — Timeline */}
+        <div id="journey" style={{ marginBottom: '5rem' }}>
           <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
             <div className="section-divider"></div>
             <h2 style={{ fontSize: '2.25rem', marginBottom: '0.5rem' }}>Your Journey</h2>
