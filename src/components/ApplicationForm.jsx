@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send, ExternalLink, ArrowRight } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
 const ApplicationForm = ({ onNavigate }) => {
   const [formData, setFormData] = useState({
@@ -7,15 +8,41 @@ const ApplicationForm = ({ onNavigate }) => {
     subject: '',
     content: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Thank you for reaching out. We will get back to you soon!');
-    setFormData({ name: '', subject: '', content: '' });
+    setIsSubmitting(true);
+
+    try {
+      if (!import.meta.env.VITE_SUPABASE_URL) {
+        throw new Error("Supabase is not configured yet.");
+      }
+
+      const { error } = await supabase
+        .from('contact_messages')
+        .insert([
+          {
+            name: formData.name,
+            subject: formData.subject,
+            content: formData.content
+          }
+        ]);
+
+      if (error) throw error;
+
+      alert('Thank you for reaching out. Your message has been sent successfully!');
+      setFormData({ name: '', subject: '', content: '' });
+    } catch (err) {
+      console.error(err);
+      alert('We had trouble sending your message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -79,8 +106,8 @@ const ApplicationForm = ({ onNavigate }) => {
               ></textarea>
             </div>
 
-            <button type="submit" className="btn btn-primary" style={{ marginTop: '0.5rem', display: 'flex', gap: '0.5rem', alignItems: 'center', justifyContent: 'center' }}>
-              <Send size={16} /> Send Message
+            <button type="submit" disabled={isSubmitting} className="btn btn-primary" style={{ marginTop: '0.5rem', display: 'flex', gap: '0.5rem', alignItems: 'center', justifyContent: 'center', opacity: isSubmitting ? 0.7 : 1 }}>
+              <Send size={16} /> {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>
