@@ -307,22 +307,16 @@ const ProgramDetails = () => {
         {/* Partners & Supporters */}
         <div id="supporters" style={{ textAlign: 'center' }}>
           <div className="section-divider"></div>
-          <h2 style={{ fontSize: '2.25rem', marginBottom: '2rem' }}>Our Supporters</h2>
-          <div className="card" style={{ padding: '2.5rem', background: 'linear-gradient(135deg, rgba(91,140,90,0.03), rgba(126,183,127,0.05))' }}>
-            <Heart size={32} color="var(--color-accent)" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ fontSize: '1.4rem', marginBottom: '1.5rem', fontWeight: 600 }}>Special Thank You To:</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem' }}>
-              {[
-                'Jessica Domiguez',
-                'Tanya Hardly',
-                'Alana Hemsworth',
-                'Torin Taylor'
-              ].map((name, i) => (
-                <div key={i} style={{ padding: '0.75rem 1rem', background: 'var(--color-bg-deep)', borderRadius: 'var(--radius-sm)', color: 'var(--color-text-muted)', fontSize: '1rem', fontWeight: 500, minHeight: '45px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  {name}
-                </div>
-              ))}
-            </div>
+          <h2 style={{ fontSize: '2.25rem', marginBottom: '1.5rem' }}>Our Supporters</h2>
+          <div className="card" style={{ padding: '3rem 2rem', background: 'linear-gradient(135deg, rgba(91,140,90,0.03), rgba(126,183,127,0.05))', maxWidth: '650px', margin: '0 auto' }}>
+            <Heart size={36} color="var(--color-accent)" style={{ marginBottom: '1.25rem', display: 'inline-block' }} />
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', fontWeight: 600 }}>Want to Support the Garden Collective?</h3>
+            <p style={{ color: 'var(--color-text-muted)', fontSize: '1rem', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '500px', margin: '0 auto 2rem auto' }}>
+              We are actively looking for media professionals, production companies, and community sponsors to help power our workforce initiative. Get in touch to learn how you can partner with us.
+            </p>
+            <a href="#contact" className="btn btn-primary interactive-btn" style={{ padding: '0.875rem 2rem' }}>
+              Become a Supporter
+            </a>
           </div>
         </div>
 
