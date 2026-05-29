@@ -19,21 +19,48 @@ const ApplicationForm = ({ onNavigate }) => {
     setIsSubmitting(true);
 
     try {
-      if (!import.meta.env.VITE_SUPABASE_URL) {
-        throw new Error("Supabase is not configured yet.");
+      const accessKey = import.meta.env.VITE_WEB3FORMS_KEY;
+      if (!accessKey) {
+        throw new Error("Web3Forms access key is not configured.");
       }
 
-      const { error } = await supabase
-        .from('contact_messages')
-        .insert([
-          {
-            name: formData.name,
-            subject: formData.subject,
-            content: formData.content
-          }
-        ]);
+      // 1. Send email via Web3Forms
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: formData.name,
+          subject: formData.subject,
+          message: formData.content,
+          from_name: "Garden Collective Contact Form"
+        })
+      });
 
-      if (error) throw error;
+      const result = await response.json();
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Failed to send email.");
+      }
+
+      // 2. Try to save to Supabase as a backup (optional)
+      if (import.meta.env.VITE_SUPABASE_URL) {
+        try {
+          await supabase
+            .from('contact_messages')
+            .insert([
+              {
+                name: formData.name,
+                subject: formData.subject,
+                content: formData.content
+              }
+            ]);
+        } catch (dbErr) {
+          console.warn("Supabase backup save failed:", dbErr);
+        }
+      }
 
       alert('Thank you for reaching out. Your message has been sent successfully!');
       setFormData({ name: '', subject: '', content: '' });
