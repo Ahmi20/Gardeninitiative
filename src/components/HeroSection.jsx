@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Leaf } from 'lucide-react';
+import { ArrowRight, Clapperboard } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -17,16 +17,16 @@ const HeroSection = () => {
         <div style={{ maxWidth: '750px', margin: '0 auto', textAlign: 'center' }}>
           
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 1.25rem', background: 'rgba(229,169,59,0.08)', borderRadius: '50px', border: '1px solid rgba(229,169,59,0.15)', color: 'var(--color-primary)', fontSize: '0.8rem', fontWeight: 600, marginBottom: '2rem', letterSpacing: '1px' }}>
-            <Leaf size={14} /> THE GARDEN COLLECTIVE
+            <Clapperboard size={14} /> THE GARDEN COLLECTIVE
           </div>
           
           <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', fontWeight: 700, lineHeight: 1.15, color: 'var(--color-text-main)' }}>
-            Planting Seeds for <br/>
-            <span className="text-gradient" style={{ fontSize: '4rem' }}>Production Careers</span>
+            Directing Futures in <br/>
+            <span className="text-gradient" style={{ fontSize: '4.2rem' }}>Film & Television</span>
           </h1>
           
           <p style={{ fontSize: '1.15rem', color: 'var(--color-text-muted)', marginBottom: '2.5rem', maxWidth: '650px', margin: '0 auto 2.5rem auto', lineHeight: 1.8 }}>
-            We are the Garden Collective — a New Jersey workforce initiative and entertainment production company. We train at-risk individuals and those seeking a fresh start to become skilled, disciplined media professionals. No experience needed.
+            We are the Garden Collective — a New Jersey workforce development initiative. We train at-risk individuals and those seeking a fresh start to become skilled, disciplined media production professionals. No experience needed.
           </p>
           
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>

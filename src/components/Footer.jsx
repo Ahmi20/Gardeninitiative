@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sprout } from 'lucide-react';
+import { Clapperboard } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -10,14 +10,14 @@ const Footer = () => {
           <div style={{ maxWidth: '320px' }}>
             <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-text-main)', marginBottom: '0.75rem' }}>
               <div style={{ background: 'linear-gradient(135deg, var(--color-primary), var(--color-secondary))', borderRadius: '10px', padding: '5px', display: 'flex' }}>
-                <Sprout size={18} color="#fff" />
+                <Clapperboard size={18} color="#fff" />
               </div>
               <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.2rem' }}>
                 Garden Collective
               </span>
             </a>
             <p style={{ color: 'var(--color-text-muted)', fontSize: '0.875rem', lineHeight: 1.7 }}>
-              An entertainment production company and workforce initiative training New Jersey residents to become skilled media professionals.
+              A New Jersey workforce development initiative training individuals for professional careers in the film, television, and commercial media industry.
             </p>
           </div>
 

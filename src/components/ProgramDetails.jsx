@@ -6,7 +6,7 @@ const ProgramDetails = () => {
 
   const features = [
     { icon: <BookOpen size={28} />, title: 'Workforce Initiative', desc: 'Standardized vocational training built for New Jersey residents seeking a sustainable, high-growth career path.' },
-    { icon: <Sliders size={28} />, title: 'Entertainment Company', desc: 'We operate as an active production company, employing our crew to shoot client media, film, and TV projects.' },
+    { icon: <Video size={28} />, title: 'Hands-on Production', desc: 'Practical, on-the-job style learning using professional gear, camera rigs, lighting tools, and industry standard software.' },
     { icon: <Briefcase size={28} />, title: 'Career Placement', desc: 'Graduate with credentials, a professional portfolio, and a direct listing on the state’s official crew directory.' },
   ];
 
@@ -181,10 +181,10 @@ const ProgramDetails = () => {
           <div className="section-divider"></div>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>About the <span className="text-gradient">Workforce Initiative</span></h2>
           <p style={{ color: 'var(--color-text-muted)', maxWidth: '750px', margin: '0 auto 2rem auto', fontSize: '1.1rem', lineHeight: 1.8 }}>
-            The Garden Collective is a New Jersey workforce initiative and entertainment production company. Our mission is to build a standardized local talent pipeline to service the Garden State's rapidly growing film and television industry. 
+            The Garden Collective is a New Jersey workforce development initiative. Our mission is to build a standardized local talent pipeline to service the Garden State's rapidly growing film and television industry. 
           </p>
           <p style={{ color: 'var(--color-text-muted)', maxWidth: '750px', margin: '0 auto', fontSize: '1.05rem', lineHeight: 1.8 }}>
-            We provide a path to sustainable, high-growth production careers for individuals seeking a fresh start, at-risk community members, and those currently lacking professional training or opportunities. As an active entertainment company, we bridge the gap by placing our students directly onto active sets and client productions.
+            We provide a path to sustainable, high-growth production careers for individuals seeking a fresh start, at-risk community members, and those currently lacking professional training or opportunities. We bridge the gap by placing our graduates directly onto active sets and regional productions through our partner network.
           </p>
         </div>
 
@@ -362,7 +362,7 @@ const ProgramDetails = () => {
             <div className="card interactive-panel" style={{ padding: '2.5rem 2rem', borderTop: '4px solid var(--color-secondary)' }}>
               <h3 style={{ fontSize: '1.4rem', marginBottom: '1.25rem', fontFamily: 'var(--font-display)' }}>Sustainability Model</h3>
               <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: '1rem' }}>
-                We operate as a dual-entity: a workforce training program and a active entertainment production company. 
+                Our program model aligns rigorous technical training with real-world industry demand to maintain long-term sustainability.
               </p>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>
                 <li style={{ display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>

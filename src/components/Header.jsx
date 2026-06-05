@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sprout } from 'lucide-react';
+import { Clapperboard } from 'lucide-react';
 
 const Header = ({ onNavigate }) => {
   const handleNav = (page, hash) => (e) => {
@@ -20,10 +20,13 @@ const Header = ({ onNavigate }) => {
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <a href="#" onClick={handleNav('home')} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'var(--color-text-main)', cursor: 'pointer' }}>
           <div style={{ background: 'linear-gradient(135deg, var(--color-primary), var(--color-secondary))', borderRadius: '12px', padding: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Sprout size={22} color="#fff" />
+            <Clapperboard size={22} color="#fff" />
           </div>
-          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.2rem' }}>
+          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             Garden Collective
+            <span style={{ fontSize: '0.65rem', fontWeight: 600, background: 'rgba(229,169,59,0.1)', color: 'var(--color-primary)', padding: '0.2rem 0.5rem', borderRadius: '4px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+              Film & TV Training
+            </span>
           </span>
         </a>
         <nav style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
