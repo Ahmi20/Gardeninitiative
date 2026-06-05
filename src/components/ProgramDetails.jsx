@@ -186,6 +186,21 @@ const ProgramDetails = () => {
           <p style={{ color: 'var(--color-text-muted)', maxWidth: '750px', margin: '0 auto', fontSize: '1.05rem', lineHeight: 1.8 }}>
             We provide a path to sustainable, high-growth production careers for individuals seeking a fresh start, at-risk community members, and those currently lacking professional training or opportunities. We bridge the gap by placing our graduates directly onto active sets and regional productions through our partner network.
           </p>
+
+          {/* Program Schedule Strip */}
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '2.5rem', flexWrap: 'wrap', marginTop: '2.5rem', padding: '1.5rem 2rem', background: 'rgba(229,169,59,0.04)', border: '1px solid rgba(229,169,59,0.1)', borderRadius: 'var(--radius-lg)' }}>
+            {[
+              { icon: '🕣', label: 'Daily Schedule', value: '8:30 AM – 6:00 PM' },
+              { icon: '📅', label: 'Days Per Week', value: '5 Days' },
+              { icon: '⏱️', label: 'Program Length', value: '8 Weeks' },
+            ].map(item => (
+              <div key={item.label} style={{ textAlign: 'center', minWidth: '140px' }}>
+                <div style={{ fontSize: '1.5rem', marginBottom: '0.35rem' }}>{item.icon}</div>
+                <div style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--color-primary)', fontFamily: 'var(--font-display)' }}>{item.value}</div>
+                <div style={{ fontSize: '0.8rem', color: 'var(--color-text-light)', marginTop: '0.15rem' }}>{item.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Feature Cards */}
