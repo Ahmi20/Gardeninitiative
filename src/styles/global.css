@@ -84,16 +84,16 @@ a:hover {
 }
 
 .btn-primary {
-  background: var(--color-primary);
-  color: #fff;
-  box-shadow: 0 4px 14px rgba(91, 140, 90, 0.25);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: #060607;
+  box-shadow: 0 4px 14px rgba(229, 169, 59, 0.2);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(91, 140, 90, 0.35);
-  background: #4e7a4d;
-  color: #fff;
+  box-shadow: 0 6px 20px rgba(229, 169, 59, 0.35);
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+  color: #060607;
 }
 
 .btn-outline {
@@ -104,19 +104,19 @@ a:hover {
 
 .btn-outline:hover {
   background: var(--color-primary);
-  color: #fff;
+  color: #060607;
 }
 
 .btn-warm {
-  background: var(--color-accent);
+  background: var(--color-secondary);
   color: #fff;
-  box-shadow: 0 4px 14px rgba(212, 163, 115, 0.3);
+  box-shadow: 0 4px 14px rgba(200, 122, 83, 0.3);
 }
 
 .btn-warm:hover {
   transform: translateY(-2px);
-  background: #c4935f;
-  color: #fff;
+  background: var(--color-primary);
+  color: #060607;
 }
 
 /* Interactive Enhancements */

@@ -29,9 +29,10 @@ const Header = ({ onNavigate }) => {
         <nav style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
           <a href="#about" onClick={handleNav('home', '#about')} style={{ color: 'var(--color-text-muted)', fontWeight: 500, fontSize: '0.9rem' }}>About</a>
           <a href="#structure" onClick={handleNav('home', '#structure')} style={{ color: 'var(--color-text-muted)', fontWeight: 500, fontSize: '0.9rem' }}>Structure</a>
+          <a href="#pricing" onClick={handleNav('home', '#pricing')} style={{ color: 'var(--color-text-muted)', fontWeight: 500, fontSize: '0.9rem' }}>Funding & Grants</a>
           <a href="#supporters" onClick={handleNav('home', '#supporters')} style={{ color: 'var(--color-text-muted)', fontWeight: 500, fontSize: '0.9rem' }}>Supporters</a>
           <a href="#contact" onClick={handleNav('home', '#contact')} style={{ color: 'var(--color-text-muted)', fontWeight: 500, fontSize: '0.9rem' }}>Contact</a>
-          <button onClick={() => { onNavigate('apply'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="btn btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.85rem' }}>Apply Now</button>
+          <button onClick={() => { onNavigate('apply'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="btn btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.85rem', color: '#060607' }}>Apply Now</button>
         </nav>
       </div>
     </header>

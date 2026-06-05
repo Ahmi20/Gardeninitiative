@@ -17,7 +17,7 @@ const Footer = () => {
               </span>
             </a>
             <p style={{ color: 'var(--color-text-muted)', fontSize: '0.875rem', lineHeight: 1.7 }}>
-              A workforce initiative training members from underrepresented communities to become skilled media professionals.
+              An entertainment production company and workforce initiative training New Jersey residents to become skilled media professionals.
             </p>
           </div>
 
@@ -26,6 +26,7 @@ const Footer = () => {
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
               <li><a href="#about" style={{ color: 'var(--color-text-muted)', fontSize: '0.875rem' }}>About the Program</a></li>
               <li><a href="#structure" style={{ color: 'var(--color-text-muted)', fontSize: '0.875rem' }}>Program Structure</a></li>
+              <li><a href="#pricing" style={{ color: 'var(--color-text-muted)', fontSize: '0.875rem' }}>Funding & Grants</a></li>
               <li><a href="#contact" style={{ color: 'var(--color-text-muted)', fontSize: '0.875rem' }}>Contact Us</a></li>
               <li><a href="#contact" style={{ color: 'var(--color-primary)', fontSize: '0.875rem', fontWeight: 600 }}>Apply Now</a></li>
             </ul>

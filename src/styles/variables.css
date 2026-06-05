@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Color Palette - Soft Garden, Warm & Inviting */
-  --color-bg-deep: #faf9f6;
-  --color-bg-base: #f4f1ec;
-  --color-bg-surface: #ffffff;
+  /* Color Palette - Sleek Dark Cinema & Production */
+  --color-bg-deep: #070708;     /* Deep matte black */
+  --color-bg-base: #0f0f12;     /* Matte dark charcoal */
+  --color-bg-surface: #17171c;  /* Dark card surface */
   
-  --color-primary: #5b8c5a;     /* Soft sage green */
-  --color-primary-glow: rgba(91, 140, 90, 0.15);
-  --color-secondary: #7eb77f;   /* Lighter fern green */
-  --color-accent: #d4a373;      /* Warm terracotta */
+  --color-primary: #e5a93b;     /* Cinema amber/gold */
+  --color-primary-glow: rgba(229, 169, 59, 0.15);
+  --color-secondary: #c87a53;   /* Sunset copper/bronze */
+  --color-accent: #e5a93b;      /* Amber accent */
   
-  --color-text-main: #2d3a2e;
-  --color-text-muted: #6b7c6b;
-  --color-text-light: #95a695;
+  --color-text-main: #f3f4f6;    /* Off-white */
+  --color-text-muted: #9ca3af;   /* Slate grey */
+  --color-text-light: #6b7280;   /* Muted grey */
 
   /* Typography */
-  --font-primary: 'DM Sans', sans-serif;
-  --font-display: 'Playfair Display', serif;
+  --font-primary: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
 
   /* Spacing */
   --space-xs: 0.25rem;
